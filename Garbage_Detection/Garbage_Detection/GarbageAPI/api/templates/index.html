@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+    <title>Image Upload</title>
+</head>
+<body>
+    <form id="imageUploadForm" enctype="multipart/form-data" method="POST">
+        {% csrf_token %}
+        <input type="file" name="image">
+        <button type="submit">Upload Image</button>
+    </form>
+    <div id="response"></div>
+
+<!--    <script src="{% static 'js/upload.js' %}"></script>-->
+</body>
+</html>
